@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 # Install podfile dependencies via cocoapods
-pod install
+if [ "$(uname)" == "Darwin" ]; then
+  pod install
+fi
